@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShubhSthaan Realty - Marketing Membership Plans</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="premium_interactive_brochure.css">
+    
+    <!-- Tailwind CSS Play CDN (must load before config) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Custom Config: set AFTER CDN loads -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B192C',
+                            slate: '#1E293B',
+                            gold: '#D4AF37',
+                            goldHover: '#F59E0B',
+                            lightGold: '#FFFDF0',
+                            bronze: '#CD7F32'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        };
+    </script>
+    <!-- Interactive Logic -->
+    <script src="premium_interactive_brochure.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen selection:bg-brand-gold selection:text-brand-navy">
+
+    <!-- TOP HEADER / BRANDING -->
+    <header class="bg-brand-navy text-white sticky top-0 z-50 shadow-md no-print border-b border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <!-- ShubhSthaan Logo -->
+            <div class="flex items-center gap-3 mb-4 sm:mb-0">
+                <div class="h-12 w-12 rounded-full border-2 border-brand-gold flex items-center justify-center gold-gradient shadow-md">
+                    <!-- Elegant Geometric House/Shubh Icon -->
+                    <svg class="w-6 h-6 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-wider font-serif uppercase text-brand-gold">ShubhSthaan</h1>
+                    <p class="text-xs uppercase tracking-widest text-slate-300 -mt-1 font-semibold">Realty</p>
+                </div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="flex items-center gap-4">
+                <a href="#calculator" class="text-sm font-semibold hover:text-brand-gold transition duration-200">Interactive Estimator</a>
+                <button class="print-btn-trigger bg-brand-gold text-brand-navy px-4 py-2 rounded-full font-bold hover:bg-brand-goldHover transition duration-200 shadow-md flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+                    </svg>
+                    Print Brochure / Save PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative dark-gradient text-white py-14 md:py-20 px-4 overflow-hidden shadow-inner">
+        <!-- Visual Backdrop Overlay -->
+        <div class="absolute inset-0 opacity-10 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="relative max-w-5xl mx-auto text-center z-10">
+            <span class="border border-brand-gold text-brand-gold text-xs uppercase tracking-widest px-3 py-1 rounded-full font-semibold">Premium Real Estate Agency Services</span>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mt-4 leading-tight">Maximize Your Property's Potential</h2>
+            <p class="text-lg md:text-xl text-slate-300 mt-4 max-w-2xl mx-auto font-light">
+                Professional Marketing &bull; Maximum Exposure &bull; Verified Buyers
+            </p>
+            <div class="w-24 h-1 gold-gradient mx-auto mt-6 rounded-full"></div>
+            <p class="text-xs text-brand-gold font-semibold uppercase tracking-widest mt-4">
+                Introducing our premium Listing & Marketing Membership Packages
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN MARKETING PACKAGES -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 -mt-8 relative z-20">
+        
+        <!-- Strategy Recommendation Badge -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-10 max-w-4xl mx-auto shadow-sm no-print">
+            <div class="flex items-start">
+                <span class="text-amber-500 mr-3">💡</span>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-sm">Launch Special Activation: Free Basic Listings!</h4>
+                    <p class="text-xs text-slate-600 mt-1">
+                        To help you build dynamic local property inventory quickly, we have restructured the <strong>Essential Plan to ₹0 (FREE)</strong>. Use this free tier to capture leads and showcase our powerful digital upgrade path (Silver, Gold, Platinum) to serious sellers!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-serif font-semibold text-brand-navy">Choose Your Marketing Strategy</h3>
+            <p class="text-slate-500 text-sm mt-1">Upgrade your presence to draw direct inquiries, high-definition assets, and premium placement</p>
+        </div>
+
+        <!-- PRICING CARD GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-6 items-start">
+            
+            <!-- PLAN 1: ESSENTIAL (FREE) -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between overflow-hidden hover:shadow-xl transition-all duration-300 card-shadow">
+                <div class="p-6">
+                    <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Plan 1</span>
+                    <h4 class="text-xl font-bold text-slate-800 mt-1 font-serif">Essential</h4>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-3xl font-black text-brand-navy">Free</span>
+                        <span class="text-slate-400 text-xs ml-1 font-semibold">/ Launch Offer</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">Perfect for individual property owners looking for an effortless online presence.</p>
+                    <div class="border-t border-slate-100 my-4"></div>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Website Listing</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Property Description</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Up to 10 Photos</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Google Maps Pin</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> WhatsApp Inquiry Button</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Basic SEO Optimizations</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> 30 Days Listing</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Customer Support</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-slate-50 border-t border-slate-100">
+                    <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Best For</p>
+                    <p class="text-xs text-slate-700 font-medium">Residential Plots, Agricultural Land, Small Properties</p>
+                </div>
+            </div>
+
+            <!-- PLAN 2: SILVER -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between overflow-hidden hover:shadow-xl transition-all duration-300 card-shadow">
+                <div class="p-6">
+                    <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Plan 2</span>
+                    <h4 class="text-xl font-bold text-slate-800 mt-1 font-serif">Silver</h4>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-3xl font-black text-brand-navy">₹2,999</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">Designed for owners seeking enhanced exposure and qualified buyer enquiries.</p>
+                    <div class="border-t border-slate-100 my-4"></div>
+                    <p class="text-[10px] uppercase font-bold text-brand-gold tracking-widest mb-3">Everything in Essential +</p>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Featured Website Listing</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Up to 25 HD Photos</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Facebook Promotion</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Instagram Story Promo</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> WhatsApp Business Push</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Property Brochure (PDF)</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Priority Inquiry Handling</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> 60 Days Listing</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-slate-50 border-t border-slate-100">
+                    <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Best For</p>
+                    <p class="text-xs text-slate-700 font-medium">Standard Apartments, Rental Units, Commercial Shops</p>
+                </div>
+            </div>
+
+            <!-- PLAN 3: GOLD (FEATURED / HIGH VALUE) -->
+            <div class="bg-brand-navy text-white rounded-2xl shadow-xl border-2 border-brand-gold flex flex-col justify-between overflow-hidden relative transform xl:-translate-y-4 transition-all duration-300 card-shadow">
+                <!-- Most Popular Tag -->
+                <div class="absolute top-0 right-0 gold-gradient text-brand-navy font-extrabold text-[9px] uppercase tracking-widest px-4 py-1 rounded-bl-xl shadow">
+                    Most Popular
+                </div>
+                <div class="p-6">
+                    <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Plan 3</span>
+                    <h4 class="text-2xl font-bold text-white mt-1 font-serif">Gold</h4>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-4xl font-black text-brand-gold">₹5,999</span>
+                    </div>
+                    <p class="text-xs text-slate-300 mt-2 leading-relaxed">Ideal for premium properties requiring higher digital traction & high-impact visual representation.</p>
+                    <div class="border-t border-brand-gold/20 my-4"></div>
+                    <p class="text-[10px] uppercase font-bold text-brand-gold tracking-widest mb-3">Everything in Silver +</p>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Professional Photo Editing</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Custom Instagram Reel</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Facebook Paid Campaign</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Video Walkthrough (HD)</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Premium copywriting</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Homepage Feature spot</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Weekly Performance Report</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Buyer Follow-up Assistance</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> 90 Days Listing</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-slate-800 border-t border-brand-gold/20">
+                    <p class="text-[11px] font-semibold text-brand-gold uppercase tracking-wider mb-2">Best For</p>
+                    <p class="text-xs text-slate-200 font-medium">Luxury Villas, Premium Residential Plots, Mid-Size Commercial Projects</p>
+                </div>
+            </div>
+
+            <!-- PLAN 4: PLATINUM -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between overflow-hidden hover:shadow-xl transition-all duration-300 card-shadow">
+                <div class="p-6">
+                    <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Plan 4</span>
+                    <h4 class="text-xl font-bold text-slate-800 mt-1 font-serif">Platinum</h4>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-3xl font-black text-brand-navy">₹12,999</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">Full premium agency treatment including bespoke visual assets & direct campaign management.</p>
+                    <div class="border-t border-slate-100 my-4"></div>
+                    <p class="text-[10px] uppercase font-bold text-brand-gold tracking-widest mb-3">Everything in Gold +</p>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Professional Photography</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Drone Aerial Photography</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Cinematic Property Video</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Dedicated Relationship Manager</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Premium Targeted Buyer Promo</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Full Social Media Management</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Premium Website Hero Banner</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> 180 Days Listing Duration</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-slate-50 border-t border-slate-100">
+                    <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Best For</p>
+                    <p class="text-xs text-slate-700 font-medium">Bespoke Luxury Homes, Grand Farmhouses, High-Value Commercial Property</p>
+                </div>
+            </div>
+
+            <!-- PLAN 5: EXCLUSIVE MANDATE -->
+            <div class="bg-slate-900 text-white rounded-2xl shadow-md border border-slate-800 flex flex-col justify-between overflow-hidden hover:shadow-xl transition-all duration-300 card-shadow">
+                <div class="p-6">
+                    <span class="text-[10px] uppercase font-bold text-amber-500 tracking-wider">Plan 5</span>
+                    <h4 class="text-xl font-bold text-white mt-1 font-serif">Exclusive Mandate</h4>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-2xl font-black text-brand-gold">Custom Pricing</span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">Our highest partnership level. We run complete operations as your dedicated brokerage force.</p>
+                    <div class="border-t border-slate-800 my-4"></div>
+                    <p class="text-[10px] uppercase font-bold text-brand-gold tracking-widest mb-3">Everything in Platinum +</p>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center gap-2"><span class="text-amber-500 font-bold">✓</span> Exclusive Selling Rights*</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-500 font-bold">✓</span> Custom Dedicated Marketing Budget</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-500 font-bold">✓</span> Targeted Google & Meta Campaigns</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-500 font-bold">✓</span> Dynamic Virtual 3D Property Tours</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-500 font-bold">✓</span> Complete In-house Sales Team</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-500 font-bold">✓</span> Direct Buyer Qualification & Screening</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-500 font-bold">✓</span> Complete Transaction Coordination</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-slate-950 border-t border-slate-800">
+                    <p class="text-[11px] font-semibold text-brand-gold uppercase tracking-wider mb-2">Best For</p>
+                    <p class="text-xs text-slate-300 font-medium">Builders, Townships, Landmark Commercial Developments</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- DETAILED MEMBERSHIP COMPARISON MATRIX -->
+        <section class="mt-20 print-break">
+            <div class="text-center mb-8">
+                <span class="text-xs uppercase font-extrabold tracking-widest text-brand-gold">Matrix View</span>
+                <h3 class="text-3xl font-serif font-bold text-brand-navy mt-1">Side-by-Side Comparison</h3>
+                <p class="text-slate-500 text-xs mt-1">Review precise feature access levels across the five plans</p>
+            </div>
+
+            <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm card-shadow -mx-4 sm:mx-0">
+                <p class="text-[10px] text-slate-400 text-center pt-2 sm:hidden">← Scroll sideways to see all plans →</p>
+                <table class="w-full min-w-[640px] text-left border-collapse">
+                    <thead>
+                        <tr class="bg-brand-navy text-white text-xs uppercase tracking-wider">
+                            <th class="p-4 font-bold border-b border-slate-700">Features</th>
+                            <th class="p-4 font-bold border-b border-slate-700">Essential (Free)</th>
+                            <th class="p-4 font-bold border-b border-slate-700 text-slate-300">Silver</th>
+                            <th class="p-4 font-bold border-b border-slate-700 text-brand-gold">Gold</th>
+                            <th class="p-4 font-bold border-b border-slate-700 text-slate-300">Platinum</th>
+                            <th class="p-4 font-bold border-b border-slate-700 text-amber-500">Exclusive Mandate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs text-slate-700 divide-y divide-slate-100">
+                        <!-- Row 1 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Website Listing</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Featured Placement</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Yes</td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Property Photos</td>
+                            <td class="p-4">10 Photos</td>
+                            <td class="p-4">25 Photos</td>
+                            <td class="p-4">25 Premium Editing</td>
+                            <td class="p-4 font-bold">Unlimited Pro Shoot</td>
+                            <td class="p-4 font-bold">Unlimited Pro Shoot</td>
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Drone Photo & Video</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Included</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Custom Drone / Cinematic</td>
+                        </tr>
+                        <!-- Row 5 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Social Media Promotions</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4">Facebook & Instagram Story</td>
+                            <td class="p-4 font-bold text-brand-navy">Facebook Campaign + Reel</td>
+                            <td class="p-4 font-bold text-brand-navy">Custom Multi-Platform campaigns</td>
+                            <td class="p-4 font-bold text-brand-navy">All-In Custom Agency Ads</td>
+                        </tr>
+                        <!-- Row 6 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Dedicated Relationship Manager</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Included</td>
+                            <td class="p-4 text-emerald-600 font-bold">✓ Dedicated Brokerage Team</td>
+                        </tr>
+                        <!-- Row 7 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Performance Updates</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 text-slate-400">✗ No</td>
+                            <td class="p-4 font-bold">Weekly reports</td>
+                            <td class="p-4">Monthly reports</td>
+                            <td class="p-4 font-bold">Weekly custom meetings</td>
+                        </tr>
+                        <!-- Row 8 -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">Listing Active Duration</td>
+                            <td class="p-4">30 Days</td>
+                            <td class="p-4">60 Days</td>
+                            <td class="p-4">90 Days</td>
+                            <td class="p-4">180 Days</td>
+                            <td class="p-4 font-bold text-amber-600">Until Sold (Exclusive)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ADD-ON PREMIUM SERVICES -->
+        <section class="mt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                
+                <!-- Add-on Services Table List -->
+                <div class="lg:col-span-7">
+                    <span class="text-xs uppercase font-extrabold tracking-widest text-brand-gold">Flexible Upgrades</span>
+                    <h3 class="text-3xl font-serif font-bold text-brand-navy mt-1">A-La-Carte Digital Upgrades</h3>
+                    <p class="text-slate-500 text-sm mt-1 mb-6">Boost your default listing anytime with individual premium digital marketing services.</p>
+                    
+                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm card-shadow">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-50 border-b border-slate-200 text-xs text-slate-500 uppercase">
+                                <tr>
+                                    <th class="p-4 font-bold">Service Component</th>
+                                    <th class="p-4 font-bold text-right">Investment (INR)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-xs divide-y divide-slate-100">
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Professional Property Photography</td><td class="p-4 text-right font-bold text-brand-navy">₹2,000</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Drone Aerial Photography Only</td><td class="p-4 text-right font-bold text-brand-navy">₹3,500</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Drone Cinematic Video Shoot</td><td class="p-4 text-right font-bold text-brand-navy">₹5,000</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Short Property Showcase Reel (Insta/YouTube)</td><td class="p-4 text-right font-bold text-brand-navy">₹2,500</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Digital Property Brochure Design (E-PDF)</td><td class="p-4 text-right font-bold text-brand-navy">₹1,500</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Featured Website Spot (30 Additional Days)</td><td class="p-4 text-right font-bold text-brand-navy">₹999</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Targeted Instagram Campaign (Ad-Spend Excluded)</td><td class="p-4 text-right font-bold text-brand-navy">₹1,500</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Targeted Facebook Campaign (Ad-Spend Excluded)</td><td class="p-4 text-right font-bold text-brand-navy">₹2,000</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="p-4 text-slate-800 font-semibold">Virtual 3D Interactive Property Tour (Matterport)</td><td class="p-4 text-right font-bold text-brand-navy">₹4,500</td></tr>
+                                <tr class="hover:bg-slate-50 bg-brand-lightGold text-brand-navy">
+                                    <td class="p-4 font-bold">Google & Meta Premium Search Ad Campaigns</td>
+                                    <td class="p-4 text-right font-extrabold text-brand-gold">Custom Budget</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Interactive Quote Calculator (Value-Add Feature) -->
+                <div id="calculator" class="lg:col-span-5 bg-brand-navy text-white p-6 md:p-8 rounded-2xl shadow-lg border border-brand-gold/20 no-print">
+                    <h4 class="text-xl font-serif font-bold text-brand-gold mb-2">Instant Package Customizer</h4>
+                    <p class="text-xs text-slate-300 mb-6">Create a tailored marketing campaign. Toggle base options and individual add-ons below for an immediate budget estimate.</p>
+                    
+                    <!-- Form Controls -->
+                    <div class="space-y-4">
+                        <!-- Select Base Plan -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">1. Select Base Strategy Plan</label>
+                            <select id="basePlan" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-xs font-semibold text-white focus:outline-none focus:ring-1 focus:ring-brand-gold">
+                                <option value="0" selected>Essential Plan (FREE Launch Special)</option>
+                                <option value="2999">Silver Plan (₹2,999)</option>
+                                <option value="5999">Gold Plan (₹5,999)</option>
+                                <option value="12999">Platinum Plan (₹12,999)</option>
+                            </select>
+                        </div>
+
+                        <!-- Checkboxes for Add-ons -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">2. Stack Add-on Upgrades</label>
+                            <div class="space-y-2 mt-2 max-h-48 overflow-y-auto pr-2">
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-800 p-2 rounded hover:bg-slate-700 transition">
+                                    <input type="checkbox" value="2000" class="addon-check rounded text-brand-gold focus:ring-brand-gold bg-slate-900 border-slate-700">
+                                    <span class="text-[11px] text-slate-200 flex-1">Professional Photography (+₹2,000)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-800 p-2 rounded hover:bg-slate-700 transition">
+                                    <input type="checkbox" value="3500" class="addon-check rounded text-brand-gold focus:ring-brand-gold bg-slate-900 border-slate-700">
+                                    <span class="text-[11px] text-slate-200 flex-1">Drone Aerial Photography (+₹3,500)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-800 p-2 rounded hover:bg-slate-700 transition">
+                                    <input type="checkbox" value="5000" class="addon-check rounded text-brand-gold focus:ring-brand-gold bg-slate-900 border-slate-700">
+                                    <span class="text-[11px] text-slate-200 flex-1">Drone Cinematic Video (+₹5,000)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-800 p-2 rounded hover:bg-slate-700 transition">
+                                    <input type="checkbox" value="2500" class="addon-check rounded text-brand-gold focus:ring-brand-gold bg-slate-900 border-slate-700">
+                                    <span class="text-[11px] text-slate-200 flex-1">Short Showcase Reel (+₹2,500)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-800 p-2 rounded hover:bg-slate-700 transition">
+                                    <input type="checkbox" value="1500" class="addon-check rounded text-brand-gold focus:ring-brand-gold bg-slate-900 border-slate-700">
+                                    <span class="text-[11px] text-slate-200 flex-1">Digital PDF Brochure (+₹1,500)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-800 p-2 rounded hover:bg-slate-700 transition">
+                                    <input type="checkbox" value="999" class="addon-check rounded text-brand-gold focus:ring-brand-gold bg-slate-900 border-slate-700">
+                                    <span class="text-[11px] text-slate-200 flex-1">Featured Spot Extension (+₹999)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-800 p-2 rounded hover:bg-slate-700 transition">
+                                    <input type="checkbox" value="4500" class="addon-check rounded text-brand-gold focus:ring-brand-gold bg-slate-900 border-slate-700">
+                                    <span class="text-[11px] text-slate-200 flex-1">Virtual 3D Interactive Tour (+₹4,500)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Estimate Display -->
+                        <div class="pt-6 border-t border-slate-700 mt-6 text-center">
+                            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-widest">Total Custom Campaign Value</span>
+                            <span id="finalEstimate" class="text-4xl font-extrabold text-brand-gold tracking-wide mt-1 block">₹0</span>
+                            <span class="text-[9px] text-slate-400 mt-1 block">Excluding custom Google & Meta advertising spends</span>
+                        </div>
+
+                        <button id="lockCampaignBtn" class="w-full mt-4 bg-brand-gold hover:bg-brand-goldHover text-brand-navy py-3 rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+                            Lock in Custom Campaign
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE A MEMBERSHIP? -->
+        <section class="mt-20 print-break">
+            <div class="bg-gradient-to-r from-brand-navy to-brand-slate text-white p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-lg card-shadow">
+                <div class="absolute inset-0 opacity-5 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80');"></div>
+                
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-gold">The ShubhSthaan Edge</span>
+                        <h3 class="text-3xl font-serif font-bold mt-2 leading-tight">More Than Just a Standard Classified Listing</h3>
+                        <p class="text-slate-300 text-xs mt-4 leading-relaxed">
+                            Unlike traditional platforms that simply drop your properties onto chaotic online databases, ShubhSthaan acts as your personal digital production agency. We craft high-quality assets and manage targeted ads to position your estate in front of highly qualified investors.
+                        </p>
+                    </div>
+                    
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700/50">
+                            <h5 class="font-bold text-brand-gold text-xs uppercase tracking-wider">🌟 Premium Production</h5>
+                            <p class="text-[11px] text-slate-300 mt-1">High-end video, dynamic copywriting, and drone shoots elevate perceived value.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700/50">
+                            <h5 class="font-bold text-brand-gold text-xs uppercase tracking-wider">🎯 Omnichannel Marketing</h5>
+                            <p class="text-[11px] text-slate-300 mt-1">Direct targeting via social channels, WhatsApp, and Google Ads ensures rapid leads.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700/50">
+                            <h5 class="font-bold text-brand-gold text-xs uppercase tracking-wider">🤝 Vetted Verification</h5>
+                            <p class="text-[11px] text-slate-300 mt-1">We filter and verify incoming leads, saving you from repetitive broker follow-ups.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700/50">
+                            <h5 class="font-bold text-brand-gold text-xs uppercase tracking-wider">📊 Systematic Reporting</h5>
+                            <p class="text-[11px] text-slate-300 mt-1">Transparency via structured weekly performance analytics on listing interaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRIEF TERMS & CONDITIONS -->
+        <footer class="mt-20 border-t border-slate-200 pt-8 text-xs text-slate-400">
+            <h5 class="font-bold text-slate-600 uppercase tracking-wider mb-2">Terms & Conditions (Summary)</h5>
+            <ul class="list-disc list-inside space-y-1.5 leading-relaxed">
+                <li>Membership fees are non-refundable once media production or target marketing actions start executing.</li>
+                <li>Production delivery timelines (e.g. photography, drone reels) are subject to location scheduling and optimal weather.</li>
+                <li>Property ownership authenticity must be fully validated with genuine legal documentation before digital campaigns begin.</li>
+                <li>Advertising metrics and campaign runtimes are subject to active platform algorithms and active budget caps.</li>
+                <li>Exclusive Mandate agreements require dedicated legal contracts signed before campaign deployment.</li>
+                <li>ShubhSthaan Realty guarantee maximum outreach, visibility, and buyer-matching efforts but do not guarantee transactional conversions.</li>
+            </ul>
+        </footer>
+
+    </main>
+
+    <!-- FOOTER SIGN OFF -->
+    <section class="bg-brand-navy text-white text-center py-10 mt-10 border-t border-brand-gold/20 no-print">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="h-10 w-10 rounded-full border border-brand-gold flex items-center justify-center gold-gradient mx-auto mb-3">
+                <span class="text-brand-navy font-bold text-xs">SS</span>
+            </div>
+            <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">SHUBHSTHAAN REALTY</p>
+            <p class="text-[10px] text-slate-500 mt-1">&copy; 2026 ShubhSthaan Realty. All Agency Rights Reserved.</p>
+        </div>
+    </section>
+    <!-- STICKY MOBILE WHATSAPP CTA (visible only on small screens) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden no-print" id="mobileCta">
+        <button id="mobileLockBtn"
+            class="w-full py-4 gold-gradient text-brand-navy font-extrabold text-sm uppercase tracking-widest flex items-center justify-center gap-3 shadow-2xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L0 24l6.278-1.506A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.643-.494-5.166-1.357l-.371-.218-3.727.894.942-3.638-.24-.386A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            📲 WhatsApp Us Your Campaign
+        </button>
+    </div>
+
+    <!-- Extra bottom padding on mobile to compensate for sticky CTA -->
+    <div class="h-16 lg:hidden"></div>
+
+</body>
+</html>

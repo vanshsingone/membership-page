@@ -1,0 +1,25 @@
+/* Print-specific styles to ensure it looks like a clean physical brochure when printed */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .print-break {
+        page-break-before: always;
+    }
+    .card-shadow {
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+    }
+}
+
+.gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+}
+
+.dark-gradient {
+    background: linear-gradient(135deg, #0B192C 0%, #1E293B 100%);
+}
