@@ -21,7 +21,7 @@ function calculateEstimate() {
 // Build and open WhatsApp chat with pre-filled campaign summary message
 function sendToWhatsApp() {
     // ✅ REPLACE THIS with your actual WhatsApp Business number (country code + number, no + or spaces)
-    const WHATSAPP_NUMBER = '918482864920';
+    const WHATSAPP_NUMBER = '919404775940';
 
     // --- Read selected base plan ---
     const baseSelect = document.getElementById('basePlan');
